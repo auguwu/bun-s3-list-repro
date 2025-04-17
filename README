@@ -1,0 +1,8 @@
+This is a reproduction repository for `oven-sh/bun#...`.
+
+== Steps ==
+
+1. Run the MinIO cluster that simulates what I am running with `./spawn-minio.sh`
+   1.a. It'll setup a MinIO cluster with `somedummyaccesskey` as the access key ID and `somedummysecretkey` as the secret key. (`mc alias set repro/ http://localhost:9000 somedummyaccesskey somedummysecretkey`)
+   1.b. The script will assume that the `default` bucket will exist, if you have `mc` setup, you can do `mc mb default`.
+2. Run the `./list-objects.js` file with Bun 1.2.9 (if you're on NixOS, then launch in the `direnv` and run the command again).
